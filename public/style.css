@@ -5,7 +5,7 @@
     
   }
   body {
-    background: url(chrome://fileicon/?path=C%3A%5CUsers%5Cwelcome%5CDownloads%5Csamuel-bourke-fOmYarAL0m0-unsplash.jpg&scale=1x);
+    background: url("https://images.unsplash.com/photo-1566816927282-34eb147bfccb");
 }
 #main-heading{
     color:white;
