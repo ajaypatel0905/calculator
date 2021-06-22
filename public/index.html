@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculator</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Kirang+Haerang&display=swap" rel="stylesheet">
+
+<body>
+        <h1 id="main-heading">Calculator</h1>
+        <div class="container">
+       
+        <form name="calculator" id="calc-form">
+                <table class="table">
+                         <tbody><tr>
+                                 <td colspan="5"><input id="show" name="show" value="0"></td>
+                         </tr>
+                         <tr>
+                                 <td><input type="button" class="operation-button" name="operation-button" value="C" onclick="this.form.show.value=  0 ">
+                                 </td>
+                                 <td><input type="button" class="operation-button" name="operation-button" value="×" onclick="deletenum(this.form.show)"></td>
+                                 <td><input type="button" class="operation-button" name="operation-button" value="=" onclick=" { calculate(this.form) }"></td>
+                                 <td><input type="button" class="symbol-button" name="symbol-button" value="+" onclick="addnum(this.form.show, '+')"></td>
+
+                                 
+                         </tr>
+                         <tr>
+                                 <td><input type="button" class="number-button" name="number-button" value="7" onclick="addnum(this.form.show, '7')"></td>
+                                 <td><input type="button" class="number-button" name="number-button" value="8" onclick="addnum(this.form.show, '8')"></td>
+                                 <td><input type="button" class="number-button" name="number-button" value="9" onclick="addnum(this.form.show, '9')"></td>
+
+                                 <td><input type="button" class="symbol-button" name="symbol-button" value="/" onclick="addnum(this.form.show, '/')"></td>
+                         </tr><tr>
+                                 <td><input type="button" class="number-button" name="number-button" value="4" onclick="addnum(this.form.show, '4')"></td>
+                                 <td><input type="button" class="number-button" name="number-button" value="5" onclick="addnum(this.form.show, '5')"></td>
+                                 <td><input type="button" class="number-button" name="number-button" value="6" onclick="addnum(this.form.show, '6')"></td>
+
+                                 <td><input type="button" class="symbol-button" name="symbol-button" value="*" onclick="addnum(this.form.show, '*')"></td>
+                         </tr>
+                         <tr>
+                                 <td><input type="button" class="number-button" name="number-button" value="1" onclick="addnum(this.form.show, '1')"></td>
+                                 <td><input type="button" class="number-button" name="number-button" value="2" onclick="addnum(this.form.show, '2')"></td>
+                                 <td><input type="button" class="number-button" name="number-button" value="3" onclick="addnum(this.form.show, '3')"></td>
+
+                                 <td><input type="button" class="symbol-button" name="symbol-button" value="-" onclick="addnum(this.form.show, '-')"></td>
+                         </tr>
+                         <tr>
+
+                                 <td><input type="button" class="number-button" name="number-button" value="00" onclick="addnum(this.form.show, '00')"></td>
+                                 <td><input type="button" class="number-button" name="number-button" value="0" onclick="addnum(this.form.show, '0')"></td>
+                                 <td><input type="button" class="number-button" name="symbol-button" value="." onclick="addnum(this.form.show, '.')"></td>
+                                 <td><input type="button" class="operation-button" name="operation-button" value="=" onclick=" { calculate(this.form) }"></td>
+
+                             </tr></tbody></table></form>
+               
+                
+                
+        
+       <div id="feedback-container">
+        <form name="feedback" method="POST" action="/feedback" id="feedback-form">
+                <textarea id="textarea" name="feedback" placeholder="Enter your feedback" rows="12" cols="30" ></textarea>
+                <button type="submit" id="text-submit">submit</button>
+        </form>
+        </div>
+</div>
+</body>
+
+</html>
